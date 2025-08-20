@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mozilla+Headline:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: solid 1px black; */
+}
+
+
+:root{
+    /* colores */
+    --primary-color: #FCECDD;
+    --secondary-color: #F8EDE3;
+    --tertiary-color: #F8EDE3;
+    --text-color: #333;
+    --accent-color: #FF6B6B;
+
+    /* fuentes */
+    --main-font: "Mozilla Headline", sans-serif;
+}
+
+body{
+    background-color: #FCECDD;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 2fr 2fr 1fr;
+    grid-template-areas: 
+        "header nav"
+        "main main"
+        "main main"
+        "footer footer";
+}
+
+header{
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav{
+    grid-area: nav;
+    /* background-color: red; */
+    display: flex;
+    justify-content: end;
+    padding: 10%;
+    ul{
+        a{
+            display: none;
+            text-decoration: none;
+        }
+    }
+}
+
+#header-txt{
+    font-family: var(--main-font);
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+main{
+    grid-area: main;
+    height: 90vh;
+    /* background-color: aqua; */
+}
+
+.main-article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#main-img{
+    border-radius: 50%;
+    height: 50%;
+    width: 50%;
+}
+
+#main-txt{
+    font-family: var(--main-font);
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-top: 20px;
+}
+
+footer{
+    grid-area: footer;
+}
+
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    height: 100%;
+    padding: 5%;
+    p{
+        font-family: var(--main-font);
+        color: var(--text-color);
+        font-size: 1.2rem;
+    }
+}
