@@ -4,13 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eliud Garcia</title>
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="/css/styles.css">
 </head>
+
 <body>
     
     <div class="grid-container">
-        <header><p id="header-txt">Mi pagina web</p></header>
-        <nav>
+        <header class="sticky-bar">
+            <p id="header-txt">Mi pagina web</p>
+        </header>
+
+        <nav class="sticky-bar">
             <ul><a href="">Inicio</a></ul>
             <ul><a href="">Acerca de mi</a></ul>
             <ul><a href="">Contacto</a></ul>
@@ -20,9 +28,35 @@
         <main>
             <article class="main-article">
                 <img id="main-img" src="./img/foto-principal.png" alt="foto de Eliud Garcia">
-                <h1 id="main-txt">Jhonnier Eliud García Capera</h1>
+                <h1 id="main-txt">BIENVENIDO</h1>
             </article>
-            <section></section>
+
+            <section id="about-me">
+                <h2 class="section-title" id="about-me">Sobre mi</h2>
+                <p class="section-txt">Hola, soy <span>Eliud Garcia</span>, un estudiante de Ingeniería de Sistemas, .</p>
+                <p >En mi tiempo libre disfruto aprender nuevas tecnologías y mejorar mis habilidades en programación.</p>
+            </section>
+            
+            <section id="contact">
+                <h2 class="section-title" id="about-me">Contacto</h2>
+                <p class="section-txt">Puedes contactarme por medio de mis redes y plataformas sociales</p>
+
+                <div class="contact-links">
+                    <a href="https://www.instagram.com/eliudgarcia_27/" target="_blank">
+                        <img src="./img/instagram.png" alt="logo de instagram">
+                    </a>
+                    <a href="https://github.com/Eliud-Garcia" target="_blank">
+                        <img src="./img/github.png" alt="logo de github">
+                    </a>
+                    <a href="https://www.linkedin.com/in/eliud-garcia99/" target="_blank">
+                        <img src="./img/linkedin.png" alt="logo de linkedin">
+                    </a>
+                </div>
+            </section>
+
+            <section>
+
+            </section>
         </main>
 
         <footer>
@@ -31,6 +65,7 @@
                 <p>Desarrollado por Eliud Garcia</p>
             </div>
         </footer>
+
     </div>
 </body>
 </html>
