@@ -14,25 +14,29 @@
 <body>
     
     <div class="grid-container">
-        <header class="sticky-bar">
-            <p id="header-txt">Mi pagina web</p>
-        </header>
+        <div class="nav-bar">
+            <header>
+                <p>Mi pagina web</p>
+            </header>
 
-        <nav class="sticky-bar">
-            <ul><a href="">Inicio</a></ul>
-            <ul><a href="">Acerca de mi</a></ul>
-            <ul><a href="">Contacto</a></ul>
-            <ul><img src="./img/menu-burger.png" alt="logo desplegable"></ul>
-        </nav>
+            <nav>
+                <ul><a href="#">Inicio</a></ul>
+                <ul><a href="#about-me">Acerca de mi</a></ul>
+                <ul><a href="#about-me">Habilidades</a></ul>
+                <ul><a href="#skills">Contacto</a></ul>
+                <ul><img src="./img/menu-burger.png" alt="logo desplegable"></ul>
+            </nav>
+        </div>
+        
 
         <main>
             <article class="main-article">
-                <img id="main-img" src="./img/foto-principal.png" alt="foto de Eliud Garcia">
-                <h1 id="main-txt">BIENVENIDO</h1>
+                <img src="./img/foto-principal.png" alt="foto de Eliud Garcia">
+                <h1 >Eliud Garcia</h1>
             </article>
-
+            
             <section id="about-me">
-                <h2 class="section-title" id="about-me">Sobre mi</h2>
+                <h2 class="section-title">Acerca de mi</h2>
                 <p class="section-txt">Hola, soy <span id="span-name">Eliud Garcia</span>, un estudiante de Ingeniería en Sistemas interesado en el campo del desarrollo <span id="span-mark">back-end</span>.</p>
                 <br>
                 <p >En mi tiempo libre disfruto aprender nuevas tecnologías y mejorar mis habilidades en programación.</p>
@@ -41,7 +45,7 @@
             </section>
             
             <section id="skills">
-                <h2 class="section-title" id="about-me">Habilidades</h2>
+                <h2 class="section-title"">Habilidades</h2>
                 <p class="section-txt">Estas son algunas de las tecnologías y lenguajes de programación que manejo:</p>
                 <div class="skills-container">
                     <img src="./img/java.png" alt="icono de java">
@@ -52,8 +56,8 @@
             </section>
 
             <section id="contact">
-                <h2 class="section-title" id="about-me">Contacto</h2>
-                <p class="section-txt">Puedes contactarme por medio de mis redes y plataformas sociales</p>
+                <h2 class="section-title">Contacto</h2>
+                <p class="section-txt">Puedes contactarme por medio de mis redes y plataformas sociales.</p>
 
                 <div class="contact-links">
                     <a href="https://www.instagram.com/eliudgarcia_27/" target="_blank">
@@ -67,7 +71,6 @@
                     </a>
                 </div>
             </section>
-
             
         </main>
 
