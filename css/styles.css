@@ -52,6 +52,9 @@ body{
     background: rgba(49, 49, 49, 0.3);
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    /* para iOS */
+    -webkit-backdrop-filter: blur(10px);
 }
 
 header{
