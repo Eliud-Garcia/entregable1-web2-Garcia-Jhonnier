@@ -169,24 +169,27 @@ aside ul{display: none;}
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 5%;
     margin: 5% 0;
-
 }
 
 .skills-container img{
     height: 50px;
+    margin: 5% 0;
 }
 
 .skills-container img:hover {
     transform: scale(1.2);
     transition: all 0.3s ease-in-out;
+    
 }
 
 
 .contact-links{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 8%;
     margin: 5% 0;
 
@@ -285,6 +288,14 @@ footer{
         display: contents;
         color: var(--txt-color-1);
         font-family: var(--work-sans);
+    }
+    nav ul a:hover{
+        color: var(--color-3);
+        text-shadow: 
+        0 0 5px var(--color-3),
+        0 0 10px var(--color-3),
+        0 0 20px var(--color-3),
+        0 0 40px var(--color-3);
     }
     nav ul img{
         display: none;
