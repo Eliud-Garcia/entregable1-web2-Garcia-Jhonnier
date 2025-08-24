@@ -97,11 +97,11 @@ main{
     align-items: center;
     flex-direction: column;
 
-    img{
+    /* img{
         border-radius: 16px;
         height: 50%;
         width: 50%;
-    }
+    } */
     h1{
         font-family: var(--main-font);
         color: var(--txt-color-1);
@@ -110,6 +110,12 @@ main{
         margin-top: 5%;
         animation: bounceInLeft 1.8s ease-in-out;
     }
+}
+
+.main-article img{
+    border-radius: 16px;
+    height: 50%;
+    width: 50%;
 }
 
 section{
@@ -344,7 +350,6 @@ footer{
             padding: 0 5%;
         }
     }
-
 
     #contact{
         width: 98%;
