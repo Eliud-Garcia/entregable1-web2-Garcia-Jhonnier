@@ -157,6 +157,25 @@ section{
     transition: all 0.3s ease-in-out;
 }
 
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10%;
+    margin: 5% 0 0 0;
+}
+
+.container img{
+    margin: 5% 0;
+    height: 50px;
+}
+
+.container img:hover {
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
+}
+
 aside{
     display: none;
 }
@@ -165,26 +184,12 @@ aside h3{display: none;}
 aside p{display: none;}
 aside ul{display: none;}
 
-.skills-container{
+
+#contact{
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 5%;
-    margin: 5% 0;
 }
-
-.skills-container img{
-    height: 50px;
-    margin: 5% 0;
-}
-
-.skills-container img:hover {
-    transform: scale(1.2);
-    transition: all 0.3s ease-in-out;
-    
-}
-
 
 .contact-links{
     display: flex;
@@ -198,6 +203,7 @@ aside ul{display: none;}
 .contact-links a img{
     height: 40px;
 }
+
 .contact-links a img:hover{
     filter: invert(1);
     transform: scale(1.2);
@@ -208,7 +214,7 @@ aside ul{display: none;}
     animation: bounceInRight 1.8s ease-in-out;
 }
 
-#skills, #contact{
+#skills, #interests{
     animation: bounceInUp 1.8s ease-in-out;
 }
 
@@ -237,15 +243,17 @@ footer{
     main{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1fr 0.7fr 1fr;
         grid-template-areas: 
             "article about-me"
-            "skills contact";
+            "skills interests"
+            "contact contact"
+            ;
     }
     
     .main-article{
-        margin: 5%;
         grid-area: article;
+        margin: 5%;
     }
     .main-article img{
         height: 60%;
@@ -253,7 +261,6 @@ footer{
     }
 
     section{
-        margin: 2%;
         width: 95%;
     }
     
@@ -263,11 +270,17 @@ footer{
 
     #skills{
         grid-area: skills;
-        height: 70%;
+        height: 100%;
+    }
+    #interests{
+        grid-area: interests;
+        height: 100%;
     }
     #contact{
         grid-area: contact;
-        height: 55%;
+        width: 97%;
+        height: 70%;
+        text-align: center;
     }
 }
 
@@ -321,39 +334,60 @@ footer{
         grid-template-columns: 1fr 1fr 0.5fr;
         grid-template-areas: 
             "article about-me aside"
-            "skills contact contact";
+            "skills interests interests"
+            "contact contact contact";
     }
-        
+    
+    .main-article{
+        grid-area: article;
+    }
+
+    .container img{
+        height: 64px;
+    }
+
+    #about-me{
+        grid-area: about-me;
+    }
+
     aside{
         grid-area: aside;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
         width: 100%;
-        margin: 5% 0;
+        height: 75%;
+        margin: 10% 0;
         background-color: var(--color-2);
-        padding: 5%;
+        padding: 5% 0;
         border-radius: 16px;
+
     }
 
-    aside #aside-title{
+    
+
+    #aside-title{
         display: flex;
         flex-direction: column;
-        list-style-type: none;
         font-size: 1.5rem;
     }
-    aside p{
-        display: contents;
+    
+    #aside-txt{
+        display: flex;
+        font-family: var(--work-sans);
+        color: var(--txt-color-1);
+        font-size: 1.1rem;
+        line-height: 1.3;
     }
-
-    aside #aside-ul{
+    
+    #aside-ul{
         display: flex;
         flex-direction: column;
-        padding: 0 10%;
+        padding: 0 13%;
     }
 
-    aside .aside-li{
+    .aside-li{
         font-family: var(--work-sans);
         color: var(--txt-color-1);
         font-size: 1.1rem;
@@ -361,14 +395,40 @@ footer{
         margin: 2% 0;
         padding: 0 5%;
     }
-
-    #contact{
-        width: 98%;
-        height: 70%;
+    
+    #skills{
+        grid-area: skills;
+        height: 95%;
     }
 
+    #interests{
+        grid-area: interests;
+        margin: 3% 0;
+        width: 100%;
+        height: 95%;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    #contact{
+        grid-area: contact;
+        width: 100%;
+        height: 90%;
+    }
+    
     #contact h2{
         text-align: center;
+        padding: 5% 0 3% 0;
+    }
+    
+    .contact-links{
+        margin: 3%;
+
+    }
+
+    .contact-links a img{
+        height: 50px;
     }
 
 }
