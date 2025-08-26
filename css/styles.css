@@ -240,10 +240,20 @@ footer{
 
 /* para tablet */
 @media (min-width: 768px){
+    .grid-container{
+        display: grid;
+        grid-template-rows: 5% 90% 5%;
+        grid-template-areas: 
+            "bar bar"
+            "main main"
+            "footer footer";       
+    }
+
     main{
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 0.7fr 1fr;
+        height: 95%;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 40% 40% 20%;
         grid-template-areas: 
             "article about-me"
             "skills interests"
@@ -262,37 +272,37 @@ footer{
 
     section{
         width: 95%;
+        margin: 3% 0;
     }
-    
+
     #about-me{
         grid-area: about-me;
     }
 
     #skills{
         grid-area: skills;
-        height: 100%;
+        height: 90%;
     }
+
     #interests{
         grid-area: interests;
-        height: 100%;
+        height: 90%;
     }
+
     #contact{
         grid-area: contact;
         width: 97%;
-        height: 70%;
+        height: 100%;
         text-align: center;
     }
 }
 
 
 @media (min-width: 1024px){
-    .grid-container{
-        grid-template-rows: 0.2fr 1fr 1fr 0.fr;
-    }
     header{
         width: 50%;
     }
-
+    
     nav ul{
         padding: 0 3%;
     }
@@ -313,7 +323,7 @@ footer{
     nav ul img{
         display: none;
     }
-
+    
     .main-article{
         margin: 5%;
         grid-area: article;
@@ -323,7 +333,7 @@ footer{
         height: 65%;
         width: 65%;
     }
-
+    
     section p{
         font-size: 1.2rem;
     }
@@ -331,17 +341,21 @@ footer{
 
 @media (min-width: 1290px){
     main{
-        grid-template-columns: 1fr 1fr 0.5fr;
+        display: grid;
+        grid-template-columns: 40% 40% 20%;
+        
         grid-template-areas: 
-            "article about-me aside"
-            "skills interests interests"
-            "contact contact contact";
+        "article about-me aside"
+        "skills interests interests"
+        "contact contact contact";
+
+        height: 90%;
     }
     
     .main-article{
         grid-area: article;
     }
-
+    
     .container img{
         height: 64px;
     }
@@ -364,8 +378,6 @@ footer{
         border-radius: 16px;
 
     }
-
-    
 
     #aside-title{
         display: flex;
@@ -398,14 +410,14 @@ footer{
     
     #skills{
         grid-area: skills;
-        height: 95%;
+        height: 90%;
     }
 
     #interests{
         grid-area: interests;
-        margin: 3% 0;
+        margin: 1% 0;
         width: 100%;
-        height: 95%;
+        height: 90%;
 
         display: flex;
         flex-direction: column;
@@ -414,8 +426,10 @@ footer{
     #contact{
         grid-area: contact;
         width: 100%;
-        height: 90%;
+        height: 100%;
+        margin: 1% 0;
     }
+    
     
     #contact h2{
         text-align: center;
@@ -424,11 +438,9 @@ footer{
     
     .contact-links{
         margin: 3%;
-
     }
 
     .contact-links a img{
         height: 50px;
     }
-
 }
